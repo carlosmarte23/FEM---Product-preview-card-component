@@ -11,8 +11,7 @@
 }
 
 body {
-  min-height: 100vh;
-  font-size: 16px;
+  height: 100vh;
 }
 
 img,
@@ -21,21 +20,4 @@ svg,
 video {
   display: block;
   max-width: 100%;
-}
-
-/* TYPOGRAPHY */
-p,
-li {
-  text-wrap: pretty;
-  max-width: 65ch;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
 }

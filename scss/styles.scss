@@ -1,1 +1,126 @@
+@import "variables";
 @import "reset";
+
+//Basic styles
+
+body {
+  background-color: $color-background;
+}
+
+main {
+  font-family: $font-family-primary;
+  color: $color-neutral-400;
+  font-size: $font-size-base;
+}
+
+h1,
+h2 {
+  color: $color-neutral-700;
+  font-family: $font-family-secondary;
+}
+
+// CARD STYLES
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-neutral-100;
+  margin: 2rem auto;
+  max-width: 90%;
+  border-radius: $border-radius;
+}
+
+.product-card-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  img {
+    border-radius: $border-radius $border-radius 0 0;
+    width: 100%;
+  }
+}
+
+.product-card-content {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem 1.3rem;
+  margin-bottom: 1rem;
+
+  .category {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    font-weight: var($font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.6ch;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 0.9;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  .product-card-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .current-price {
+      font-family: $font-family-secondary;
+      font-size: 2rem;
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+    .original-price {
+      text-decoration: line-through;
+    }
+  }
+
+  .add-to-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-neutral-100;
+    cursor: pointer;
+
+    &::before {
+      content: url(../images/icon-cart.svg);
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}
+.attribution {
+  font-family: $font-family-primary;
+  font-size: 0.75rem;
+  text-align: center;
+  color: $color-neutral-400;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: $color-neutral-100;
+  border-radius: $border-radius;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
