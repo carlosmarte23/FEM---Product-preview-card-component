@@ -47,6 +47,12 @@ h2 {
   max-width: 90%;
   border-radius: 0.875rem;
 }
+@media (min-width: 768px) {
+  .product-card {
+    flex-direction: row;
+    max-width: 40rem;
+  }
+}
 
 .product-card-image {
   display: block;
@@ -56,6 +62,11 @@ h2 {
 .product-card-image img {
   border-radius: 0.875rem 0.875rem 0 0;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .product-card-image img {
+    border-radius: 0.875rem 0 0 0.875rem;
+  }
 }
 
 .product-card-content {
@@ -112,6 +123,11 @@ h2 {
   width: 1.2rem;
   height: 1.2rem;
 }
+.product-card-content .add-to-cart-btn:hover, .product-card-content .add-to-cart-btn:focus-visible {
+  background-color: hsl(158, 36%, 18%);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
 
 .attribution {
   font-family: "Montserrat", sans-serif;
@@ -123,14 +139,25 @@ h2 {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.875rem;
   max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 .attribution a {
   color: hsl(158, 36%, 37%);
   text-decoration: none;
   font-weight: 700;
 }
-.attribution a:hover {
+.attribution a:hover,
+.attribution a :focus-visible {
   text-decoration: underline;
+  color: hsl(158, 36%, 18%);
+  transition: color 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .attribution {
+    max-width: 40rem;
+  }
+  .attribution br {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

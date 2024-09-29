@@ -27,6 +27,11 @@ h2 {
   margin: 2rem auto;
   max-width: 90%;
   border-radius: $border-radius;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    max-width: 40rem;
+  }
 }
 
 .product-card-image {
@@ -37,6 +42,10 @@ h2 {
   img {
     border-radius: $border-radius $border-radius 0 0;
     width: 100%;
+
+    @media (min-width: 768px) {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
   }
 }
 
@@ -99,6 +108,13 @@ h2 {
       width: 1.2rem;
       height: 1.2rem;
     }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-active;
+      transition: background-color 0.3s ease-in-out;
+      cursor: pointer;
+    }
   }
 }
 .attribution {
@@ -111,16 +127,27 @@ h2 {
   background-color: $color-neutral-100;
   border-radius: $border-radius;
   max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 
   a {
     color: $color-primary;
     text-decoration: none;
     font-weight: $font-weight-bold;
 
-    &:hover {
+    &:hover,
+    :focus-visible {
       text-decoration: underline;
+      color: $color-active;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 40rem;
+
+    br {
+      display: none;
     }
   }
 }
