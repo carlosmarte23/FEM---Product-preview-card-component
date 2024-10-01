@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Product preview card component - Github](https://github.com/carlosmarte23/FEM---Product-preview-card-component)
-- Live Site URL: [Product preview card component - Github Pages](https://your-live-site-url.com)
+- Live Site URL: [Product preview card component - Github Pages](https://carlosmarte23.github.io/FEM---Product-preview-card-component/)
 
 ## My process
 
